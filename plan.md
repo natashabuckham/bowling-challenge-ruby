@@ -44,6 +44,10 @@ In a new frame:
 - If frame number == 11, stop and display total.
 
 Tests:
+ it "converts rolls string to array of roll integers" do
+
+ end
+
  it "adds scores to total" do
 
  end

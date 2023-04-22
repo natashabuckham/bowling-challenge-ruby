@@ -12,4 +12,10 @@ describe Bowling do
     result = bowling.convert_rolls
     expect(bowling.score(result)).to eq 13
   end
+
+  it "increases frame by 1" do
+    bowling = Bowling.new("2, 4, 6, 1")
+    bowling.increase_frame
+    expect(bowling.frame).to eq 1
+  end
 end
