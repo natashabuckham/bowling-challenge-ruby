@@ -7,8 +7,9 @@ describe Bowling do
     expect(bowling.convert_rolls).to eq [2, 4, 6, 1]
   end
 
-  xit "adds scores to total" do
+  it "adds scores to total" do
     bowling = Bowling.new("2, 4, 6, 1")
-    expect(bowling.score).to eq 13
+    result = bowling.convert_rolls
+    expect(bowling.score(result)).to eq 13
   end
 end

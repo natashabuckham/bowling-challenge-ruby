@@ -7,9 +7,9 @@ class Bowling
     @rolls.split(", ").map{ |roll| roll.to_i }
   end
 
-  def score
+  def score(convert_rolls)
     @score = 0
-    @rolls.each { |roll| @score << roll }
+    convert_rolls.each { |roll| @score += roll }
     return @score
   end
 end

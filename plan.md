@@ -1,5 +1,24 @@
 User will input a string of comma-separated numbers which constitutes all the rolls for their game.
 
+Programme will output a scorecard, showing the score for each frame and the total score. E.g.
+Frame 1: 5, 0
+Type: normal
+Score: 5
+
+Frame 2: 10, -
+Type: strike
+Score: 25
+
+Frame 3: 3, 7
+Type: spare
+Score: 37
+
+Frame 4: 2, 2
+Type: normal
+Score: 41
+
+Total score: 41
+
 Previous frame?
 Frame counter
 Roll counter
