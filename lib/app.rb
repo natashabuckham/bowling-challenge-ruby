@@ -10,9 +10,11 @@ class Bowling
 
   def score
     @score = 0
-    @rolls.each do |roll|
-      @score += roll
-      @roll_tracker += 1
+    frame_converter.each do |frame_number, frame_rolls|
+
+      @score += frame_rolls[0]
+      @score += frame_rolls[1]
+      @roll_tracker += 2
     end
     return @score
   end
