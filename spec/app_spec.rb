@@ -18,4 +18,11 @@ describe Bowling do
     bowling.increase_frame
     expect(bowling.frame).to eq 1
   end
+
+  it "keeps track of rolls" do
+    bowling = Bowling.new("2, 4, 6, 1")
+    result = bowling.convert_rolls
+    bowling.score(result)
+    expect(bowling.roll_tracker).to eq 4
+  end
 end
