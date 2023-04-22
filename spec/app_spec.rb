@@ -23,4 +23,9 @@ describe Bowling do
     bowling.score
     expect(bowling.roll_tracker).to eq 4
   end
+
+  it "converts rolls into a frames hash" do
+    bowling = Bowling.new("2, 4, 6, 1")
+    expect(bowling.frame_converter).to eq( {1=>[2, 4], 2=>[6, 1] })
+  end
 end
