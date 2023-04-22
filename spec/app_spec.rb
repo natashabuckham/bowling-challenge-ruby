@@ -13,19 +13,6 @@ describe Bowling do
     expect(bowling.score).to eq 13
   end
 
-  it "increases frame by 1" do
-    bowling = Bowling.new("2, 4, 6, 1")
-    bowling.increase_frame
-    expect(bowling.frame).to eq 1
-  end
-
-  it "keeps track of rolls" do
-    bowling = Bowling.new("2, 4, 6, 1")
-    bowling.frame_converter
-    bowling.score
-    expect(bowling.roll_tracker).to eq 4
-  end
-
   it "converts rolls into a frames hash for normal frames" do
     bowling = Bowling.new("2, 4, 6, 1")
     expect(bowling.frame_converter).to eq( { 1=>[2, 4], 2=>[6, 1] })
@@ -64,5 +51,11 @@ describe Bowling do
     bowling = Bowling.new("10, 10, 1, 3")
     bowling.frame_converter
     expect(bowling.score).to eq 39
+  end
+
+  it "adds bonus points for a spare followed by a strike" do
+    bowling = Bowling.new("7, 3, 10, 1, 2")
+    bowling.frame_converter
+    expect(bowling.score).to eq 36
   end
 end

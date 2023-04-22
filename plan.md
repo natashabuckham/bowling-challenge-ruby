@@ -44,43 +44,7 @@ In a new frame:
 - If frame number == 11, stop and display total.
 
 Tests:
- it "converts rolls string to array of roll integers" do
-
- end
-
- it "adds scores to total" do
-
- end
-
- it "keeps track of frames" do
-
-  end
-
-  it "keeps track of rolls" do
-
-  end
-
-  it "adds bonus points for a spare" do
-
-  end
-
-  it "changes frame after one roll if it is a strike" do
-
-  end
-
-  it "adds bonus points for a strike" do
-
-  end
-
   it "returns the score after 10 frames" do
-
-  end
-
-  it "accounts for sequential spares" do
-
-  end
-
-  it "accounts for sequential strikes" do
 
   end
 
@@ -99,3 +63,6 @@ Tests:
   it "calculates the score for a perfect game" do
 
   end
+
+
+REFACTOR SCORE METHOD
