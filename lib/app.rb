@@ -1,19 +1,15 @@
 class Bowling
-  attr_accessor :frame, :roll_tracker
+  attr_accessor :frame, :roll_tracker, :rolls
 
   def initialize(rolls) #rolls is a comma-separated string of numbers representing the pins knocked over on each roll
-    @rolls = rolls
+    @rolls = rolls.split(", ").map{ |roll| roll.to_i }
     @frame = 0
     @roll_tracker = 0
   end
 
-  def convert_rolls
-    @rolls.split(", ").map{ |roll| roll.to_i }
-  end
-
-  def score(convert_rolls)
+  def score
     @score = 0
-    convert_rolls.each do |roll|
+    @rolls.each do |roll|
       @score += roll
       @roll_tracker += 1
     end
@@ -23,4 +19,5 @@ class Bowling
   def increase_frame
     @frame += 1
   end
+
 end
