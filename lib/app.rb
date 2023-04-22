@@ -30,6 +30,10 @@ class Bowling
         frame_values = @rolls.shift(2)
         frame_count += 1
         frame_hash[frame_count] = frame_values
+      else
+        frame_values = @rolls.shift
+        frame_count += 1
+        frame_hash[frame_count] = [frame_values]
       end
     end
 
