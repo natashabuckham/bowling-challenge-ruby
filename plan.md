@@ -64,5 +64,10 @@ Tests:
 
   end
 
-
-REFACTOR SCORE METHOD
+To do:
+[ ] Refactor score method to pull out normal, strike and spare into separate methods
+[ ] Refactor score method DRY
+[ ] Test frame_converter for spare bonus in 10th frame
+[ ] Test frame_converter for strike bonus in 10th frame
+[ ] Test score method for 10th frame irregularity - if frame_count > 10, don't apply strike or spare bonuses
+[ ] Implement scorecard UI/copy

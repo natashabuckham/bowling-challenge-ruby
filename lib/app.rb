@@ -34,6 +34,8 @@ class Bowling
     return @score
   end
 
+  def
+
   def frame_converter
     frame_count = 0
     until @rolls.empty?
